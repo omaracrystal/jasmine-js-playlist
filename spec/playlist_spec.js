@@ -13,28 +13,36 @@ describe('Playlist', function() {
     expect(playlist.isEmpty()).toEqual(true);
   });
 
-  // it("allows you to add a song", function() {
-  //   var playlist = new Playlist();
-  // 
-  //   playlist.addSong(itHadToBeYou)
-  //
-  //   expect(playlist.isEmpty()).toEqual(false);
-  // });
 
-  // it("allows you to see all song names in the order they were added", function() {
-  //   var playlist = new Playlist();
-  //
-  //   expect(playlist.songNames()).toEqual([]);
-  //
-  //   playlist.addSong(itHadToBeYou)
-  //   expect(playlist.songNames()).toEqual(['It had to be you']);
-  //
-  //   playlist.addSong(butNotForMe)
-  //   expect(playlist.songNames()).toEqual([
-  //     'It had to be you',
-  //     'But Not for Me'
-  //   ]);
-  // });
+
+  it("allows you to add a song", function() {
+    var playlist = new Playlist();
+
+    playlist.addSong(itHadToBeYou)
+
+    expect(playlist.isEmpty()).toEqual(false);
+  });
+
+
+
+
+  it("allows you to see all song names in the order they were added", function() {
+    var playlist = new Playlist();
+
+    expect(playlist.songNames()).toEqual([]);
+
+    playlist.addSong(itHadToBeYou)
+    expect(playlist.songNames()).toEqual(['It had to be you']);
+
+    playlist.addSong(butNotForMe)
+    expect(playlist.songNames()).toEqual([
+      'It had to be you',
+      'But Not for Me'
+    ]);
+  });
+
+
+
 
   // it("allows you remove a song from the playlist", function() {
   //   var playlist = new Playlist();
